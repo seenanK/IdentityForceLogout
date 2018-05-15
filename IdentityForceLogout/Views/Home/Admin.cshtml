@@ -1,0 +1,32 @@
+﻿
+@{
+    ViewBag.Title = "Admin";
+}
+
+<div class="jumbotron">
+    <h1>Force Logout</h1>
+    <p class="lead">This application demonstrate how to implement force logout using SignalR.</p>
+    <p><a href="http://asp.net" class="btn btn-primary btn-lg">for complete tutorial &raquo;</a></p>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <h2>This is Admin's Page</h2>
+        <p><a id="displayActiveUsers" href="javascript:void(0)" class="btn btn-success btn-md">Show All Active User</a></p>
+        <p>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Username</th>
+                        <th scope="col">Action</th>
+                    </tr>
+                </thead>
+                <tbody id="usersTable">
+
+                </tbody>
+            </table>
+        </p>
+    </div>
+</div>
+

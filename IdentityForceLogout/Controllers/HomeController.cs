@@ -8,6 +8,7 @@ namespace IdentityForceLogout.Controllers
 {
     public class HomeController : Controller
     {
+        [Authorize]
         public ActionResult Index()
         {
             return View();
@@ -24,6 +25,17 @@ namespace IdentityForceLogout.Controllers
         {
             ViewBag.Message = "Your contact page.";
 
+            return View();
+        }
+
+        [Authorize(Roles = "Admin")]
+        public ActionResult Admin()
+        {            
+            return View();
+        }
+        [Authorize(Roles = "User")]
+        public ActionResult User()
+        {
             return View();
         }
     }
